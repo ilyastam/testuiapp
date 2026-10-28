@@ -1,7 +1,7 @@
 {
     "welcome_header": "Hello world!",
     "title": {
-        "template": "{page} · TicketNest",
+        "template": "{page} · TicketNest 2",
         "home": "Home",
         "events": "Events",
         "booking": "Book tickets",
