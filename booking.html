@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book tickets · TicketNest</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="booking">
+<header class="site"><div class="wrap"><a class="logo" href="index.html">Ticket<span>Nest</span></a><nav><a href="index.html">Home</a><a href="events.html">Events</a><a href="booking.html" class=active>Book</a><a href="checkout.html">Checkout</a><a href="confirmation.html">My ticket</a></nav></div></header>
+<main><div class="wrap"><h2>Book your tickets</h2><div class="two">
+<div class="panel"><label for="event">Event</label><select id="event"></select><p class="meta" id="date"></p>
+<label for="seat">Seat type</label><select id="seat"></select>
+<label>Number of tickets</label><div class="qty"><button id="minus" aria-label="Fewer">−</button><output id="qty">2</output><button id="plus" aria-label="More">+</button></div></div>
+<div class="panel sum"><h3>Order summary</h3><div><span>Tickets</span><span id="unit"></span></div><div><span>Service fees</span><span id="fees"></span></div><div class="total"><span>Total</span><span id="total"></span></div><button class="btn" id="go" style="width:100%;margin-top:14px">Continue to checkout</button></div>
+</div></div></main>
+<footer><div class="wrap">TicketNest is a sample site. No real tickets or payments.</div></footer>
+<script src="app.js"></script></body></html>

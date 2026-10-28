@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkout · TicketNest</title><link rel="stylesheet" href="style.css"></head>
+<body data-page="checkout">
+<header class="site"><div class="wrap"><a class="logo" href="index.html">Ticket<span>Nest</span></a><nav><a href="index.html">Home</a><a href="events.html">Events</a><a href="booking.html">Book</a><a href="checkout.html" class=active>Checkout</a><a href="confirmation.html">My ticket</a></nav></div></header>
+<main><div class="wrap" id="content"><h2>Checkout</h2><div class="two">
+<form class="panel" id="form"><label for="name">Full name</label><input id="name" required autocomplete="name">
+<label for="email">Email</label><input id="email" type="email" required autocomplete="email">
+<label for="card">Card number (any number works)</label><input id="card" required inputmode="numeric" pattern="[0-9 ]{12,19}" placeholder="4242 4242 4242 4242">
+<div class="row"><div><label for="exp">Expiry</label><input id="exp" required placeholder="MM/YY"></div><div><label for="cvc">CVC</label><input id="cvc" required inputmode="numeric" pattern="[0-9]{3,4}" placeholder="123"></div></div>
+<button class="btn" style="width:100%;margin-top:20px">Pay now</button></form>
+<div class="panel" id="summary"></div></div></div></main>
+<footer><div class="wrap">TicketNest is a sample site. No real tickets or payments.</div></footer>
+<script src="app.js"></script></body></html>
