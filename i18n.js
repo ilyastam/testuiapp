@@ -20,19 +20,67 @@
 
   const locale = detect();
   const meta = LOCALES[locale].meta;
-  const msgs = LOCALES[locale].messages;
-  const fallback = LOCALES[FALLBACK].messages;
   const plural = new Intl.PluralRules(locale);
 
-  // Looks up key (with plural suffix when params.count is set) and fills {placeholders}.
-  function t(key, params = {}) {
-    let s;
-    if (params.count !== undefined) {
-      const k = key + "_" + plural.select(params.count);
-      s = msgs[k] ?? msgs[key + "_other"] ?? fallback[k] ?? fallback[key + "_other"];
+  // Locale files are nested JSON; flatten to "a.b.c" keys once.
+  function flatten(o, prefix = "", out = {}) {
+    for (const [k, v] of Object.entries(o)) {
+      const key = prefix ? prefix + "." + k : k;
+      if (v && typeof v === "object") flatten(v, key, out); else out[key] = v;
     }
-    s = s ?? msgs[key] ?? fallback[key] ?? key;
-    return s.replace(/\{(\w+)\}/g, (m, name) => (params[name] !== undefined ? params[name] : m));
+    return out;
+  }
+  const msgs = flatten(LOCALES[locale].messages);
+  const fallback = flatten(LOCALES[FALLBACK].messages);
+  const numFmt = new Intl.NumberFormat(locale);
+
+  // Finds the "}" that closes the "{" at index i.
+  function closing(s, i) {
+    let depth = 0;
+    for (let j = i; j < s.length; j++) {
+      if (s[j] === "{") depth++;
+      else if (s[j] === "}" && --depth === 0) return j;
+    }
+    return s.length;
+  }
+
+  // ICU MessageFormat subset: {name}, {n, plural, =0 {..} one {..} other {.. #}}, {x, select, a {..} other {..}}.
+  function format(s, p, hash) {
+    let out = "";
+    for (let i = 0; i < s.length; i++) {
+      if (s[i] === "{") {
+        const end = closing(s, i);
+        out += arg(s.slice(i + 1, end), p, hash);
+        i = end;
+      } else if (s[i] === "#" && hash !== undefined) out += numFmt.format(hash);
+      else out += s[i];
+    }
+    return out;
+  }
+
+  function arg(body, p, hash) {
+    const m = body.match(/^\s*(\w+)\s*(?:,\s*(plural|select)\s*,([\s\S]*))?$/);
+    if (!m) return "{" + body + "}";
+    const [, name, type, rest] = m;
+    if (!type) return p[name] !== undefined ? p[name] : "{" + body + "}";
+    const opts = {};
+    for (let i = 0; i < rest.length; i++) {
+      if (/\s/.test(rest[i])) continue;
+      const open = rest.indexOf("{", i);
+      if (open < 0) break;
+      const end = closing(rest, open);
+      opts[rest.slice(i, open).trim()] = rest.slice(open + 1, end);
+      i = end;
+    }
+    const v = p[name];
+    const pick = type === "plural"
+      ? opts["=" + v] ?? opts[plural.select(v)] ?? opts.other
+      : opts[v] ?? opts.other;
+    return pick === undefined ? "" : format(pick, p, type === "plural" ? v : hash);
+  }
+
+  function t(key, params = {}) {
+    return format(msgs[key] ?? fallback[key] ?? key, params);
   }
 
   const money = n => new Intl.NumberFormat(locale, { style: "currency", currency: meta.currency || "USD" }).format(n);

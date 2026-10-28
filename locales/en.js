@@ -1,99 +1,147 @@
+// Generated from en.json by scripts/build-locales.js. Do not edit.
 window.LOCALES = window.LOCALES || {};
-window.LOCALES.en = {
-  meta: { name: "English", dir: "ltr", currency: "USD" },
-  messages: {
-    "title.template": "{page} · TicketNest",
-    "title.home": "Home",
-    "title.events": "Events",
-    "title.booking": "Book tickets",
-    "title.checkout": "Checkout",
-    "title.confirmation": "Confirmation",
-
-    "nav.home": "Home",
-    "nav.events": "Events",
-    "nav.book": "Book",
-    "nav.checkout": "Checkout",
-    "nav.ticket": "My ticket",
-    "lang.label": "Language",
-    "footer.note": "TicketNest is a sample site. No real tickets or payments.",
-
-    "home.hero.title": "Find your next live moment",
-    "home.hero.text": "Book tickets for concerts, theatre, sports and comedy in a few clicks.",
-    "home.hero.cta": "Browse events",
-    "home.featured": "Featured events",
-    "home.step1.title": "Pick an event",
-    "home.step1.text": "Filter by type and city.",
-    "home.step2.title": "Choose seats",
-    "home.step2.text": "General, Premium or VIP.",
-    "home.step3.title": "Pay and go",
-    "home.step3.text": "Get your ticket code at once.",
-
-    "events.heading": "All events",
-    "events.filter.all": "All",
-    "card.from": "From {price}",
-    "card.book": "Book now",
-    "card.meta": "{city} · {date}",
-
-    "category.music": "Music",
-    "category.theatre": "Theatre",
-    "category.sports": "Sports",
-    "category.comedy": "Comedy",
-
-    "seat.general": "General admission",
-    "seat.premium": "Premium",
-    "seat.vip": "VIP",
-
-    "city.austin": "Austin",
-    "city.boston": "Boston",
-    "city.newyork": "New York",
-    "city.chicago": "Chicago",
-    "city.manchester": "Manchester",
-    "city.denver": "Denver",
-    "city.seattle": "Seattle",
-    "city.portland": "Portland",
-
-    "event.1.title": "Neon Nights Festival",
-    "event.2.title": "City Lights Orchestra",
-    "event.3.title": "Hamilton Heights",
-    "event.4.title": "The Midnight Mystery",
-    "event.5.title": "Derby Night: Rovers vs. United",
-    "event.6.title": "Playoff Finals Game 1",
-    "event.7.title": "Laugh Out Loud Tour",
-    "event.8.title": "Stand-Up Saturday",
-
-    "booking.heading": "Book your tickets",
-    "booking.event": "Event",
-    "booking.eventOption": "{title} — {city}",
-    "booking.seat": "Seat type",
-    "booking.qty": "Number of tickets",
-    "booking.fewer": "Fewer tickets",
-    "booking.more": "More tickets",
-    "booking.summary": "Order summary",
-    "booking.tickets_one": "{count} ticket",
-    "booking.tickets_other": "{count} tickets",
-    "booking.unit": "{price} × {qty}",
-    "booking.fees": "Service fees",
-    "booking.total": "Total",
-    "booking.continue": "Continue to checkout",
-
-    "checkout.heading": "Checkout",
-    "checkout.name": "Full name",
-    "checkout.email": "Email",
-    "checkout.card": "Card number (any number works)",
-    "checkout.cardPlaceholder": "4242 4242 4242 4242",
-    "checkout.exp": "Expiry",
-    "checkout.expPlaceholder": "MM/YY",
-    "checkout.cvc": "CVC",
-    "checkout.cvcPlaceholder": "123",
-    "checkout.pay": "Pay now",
-    "checkout.line": "{seat} × {qty}",
-    "checkout.empty": "No tickets chosen yet.",
-
-    "confirm.heading": "You're going, {name}!",
-    "confirm.sent": "We sent a confirmation to {email}",
-    "confirm.line": "{tickets} · {seat}",
-    "confirm.note": "Show this code at the door. Total paid: {total}",
-    "confirm.more": "Book more events",
-    "confirm.empty": "No order found."
+window.LOCALES["en"] = {
+  "meta": {
+    "name": "English",
+    "dir": "ltr",
+    "currency": "USD"
+  },
+  "messages": {
+    "title": {
+      "template": "{page} · TicketNest",
+      "home": "Home",
+      "events": "Events",
+      "booking": "Book tickets",
+      "checkout": "Checkout",
+      "confirmation": "Confirmation"
+    },
+    "nav": {
+      "home": "Home",
+      "events": "Events",
+      "book": "Book",
+      "checkout": "Checkout",
+      "ticket": "My ticket"
+    },
+    "lang": {
+      "label": "Language"
+    },
+    "footer": {
+      "note": "TicketNest is a sample site. No real tickets or payments."
+    },
+    "home": {
+      "hero": {
+        "title": "Find your next live moment",
+        "text": "Book tickets for concerts, theatre, sports and comedy in a few clicks.",
+        "cta": "Browse events"
+      },
+      "featured": "Featured events",
+      "step1": {
+        "title": "Pick an event",
+        "text": "Filter by type and city."
+      },
+      "step2": {
+        "title": "Choose seats",
+        "text": "General, Premium or VIP."
+      },
+      "step3": {
+        "title": "Pay and go",
+        "text": "Get your ticket code at once."
+      }
+    },
+    "events": {
+      "heading": "All events",
+      "filter": {
+        "all": "All"
+      }
+    },
+    "card": {
+      "from": "From {price}",
+      "book": "Book now",
+      "meta": "{city} · {date}"
+    },
+    "category": {
+      "music": "Music",
+      "theatre": "Theatre",
+      "sports": "Sports",
+      "comedy": "Comedy"
+    },
+    "seat": {
+      "general": "General admission",
+      "premium": "Premium",
+      "vip": "VIP"
+    },
+    "city": {
+      "austin": "Austin",
+      "boston": "Boston",
+      "newyork": "New York",
+      "chicago": "Chicago",
+      "manchester": "Manchester",
+      "denver": "Denver",
+      "seattle": "Seattle",
+      "portland": "Portland"
+    },
+    "event": {
+      "1": {
+        "title": "Neon Nights Festival"
+      },
+      "2": {
+        "title": "City Lights Orchestra"
+      },
+      "3": {
+        "title": "Hamilton Heights"
+      },
+      "4": {
+        "title": "The Midnight Mystery"
+      },
+      "5": {
+        "title": "Derby Night: Rovers vs. United"
+      },
+      "6": {
+        "title": "Playoff Finals Game 1"
+      },
+      "7": {
+        "title": "Laugh Out Loud Tour"
+      },
+      "8": {
+        "title": "Stand-Up Saturday"
+      }
+    },
+    "booking": {
+      "heading": "Book your tickets",
+      "event": "Event",
+      "eventOption": "{title} — {city}",
+      "seat": "Seat type",
+      "qty": "Number of tickets",
+      "fewer": "Fewer tickets",
+      "more": "More tickets",
+      "summary": "Order summary",
+      "unit": "{price} × {qty}",
+      "fees": "Service fees",
+      "total": "Total",
+      "continue": "Continue to checkout",
+      "tickets": "{count, plural, one {# ticket} other {# tickets}}"
+    },
+    "checkout": {
+      "heading": "Checkout",
+      "name": "Full name",
+      "email": "Email",
+      "card": "Card number (any number works)",
+      "cardPlaceholder": "4242 4242 4242 4242",
+      "exp": "Expiry",
+      "expPlaceholder": "MM/YY",
+      "cvc": "CVC",
+      "cvcPlaceholder": "123",
+      "pay": "Pay now",
+      "line": "{seat} × {qty}",
+      "empty": "No tickets chosen yet."
+    },
+    "confirm": {
+      "heading": "You're going, {name}!",
+      "sent": "We sent a confirmation to {email}",
+      "line": "{tickets} · {seat}",
+      "note": "Show this code at the door. Total paid: {total}",
+      "more": "Book more events",
+      "empty": "No order found."
+    }
   }
 };
