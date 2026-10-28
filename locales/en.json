@@ -73,28 +73,28 @@
     "portland": "Portland"
   },
   "event": {
-    "1": {
+    "e1": {
       "title": "Neon Nights Festival"
     },
-    "2": {
+    "e2": {
       "title": "City Lights Orchestra"
     },
-    "3": {
+    "e3": {
       "title": "Hamilton Heights"
     },
-    "4": {
+    "e4": {
       "title": "The Midnight Mystery"
     },
-    "5": {
+    "e5": {
       "title": "Derby Night: Rovers vs. United"
     },
-    "6": {
+    "e6": {
       "title": "Playoff Finals Game 1"
     },
-    "7": {
+    "e7": {
       "title": "Laugh Out Loud Tour"
     },
-    "8": {
+    "e8": {
       "title": "Stand-Up Saturday"
     }
   },

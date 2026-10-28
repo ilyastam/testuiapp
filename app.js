@@ -16,7 +16,7 @@ const get=k=>{try{return JSON.parse(localStorage.getItem(k))}catch(e){return nul
 const set=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
 const byId=id=>EVENTS.find(e=>e.id==id);
 const total=b=>{const e=byId(b.eventId);return e.price*SEATS[b.seat].mult*b.qty+FEE*b.qty};
-const evTitle=e=>t("event."+e.id+".title");
+const evTitle=e=>t("event.e"+e.id+".title");
 const evCity=e=>t("city."+e.city);
 const seatName=k=>t("seat."+k);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
