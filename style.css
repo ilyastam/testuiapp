@@ -7,7 +7,7 @@ header.site{background:var(--card);border-bottom:1px solid var(--line);position:
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
 .logo{font-weight:800;font-size:20px;text-decoration:none;color:var(--ink)}
 .logo span{color:var(--accent)}
-nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+nav a{margin-inline-start:18px;text-decoration:none;color:var(--muted);font-weight:600}
 nav a.active,nav a:hover{color:var(--brand)}
 .hero{background:linear-gradient(135deg,#5b3df5,#9b5cff 60%,#ff6b4a);color:#fff;padding:72px 0;text-align:center}
 .hero h1{font-size:clamp(30px,5vw,48px);margin:0 0 12px}
@@ -36,7 +36,7 @@ h2{margin:0 0 18px}
 .chip.on{background:var(--brand);border-color:var(--brand);color:#fff}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
 .two{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:start}
-@media(max-width:760px){.two{grid-template-columns:1fr}nav a{margin-left:10px;font-size:14px}}
+@media(max-width:760px){.two{grid-template-columns:1fr}nav a{margin-inline-start:10px;font-size:14px}}
 label{display:block;font-weight:600;margin:14px 0 6px}
 input,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
 input:focus,select:focus{outline:2px solid var(--brand);border-color:transparent}
@@ -51,3 +51,5 @@ input:focus,select:focus{outline:2px solid var(--brand);border-color:transparent
 .ok{color:var(--ok);font-size:48px}
 .empty{text-align:center;padding:40px}
 footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);text-align:center;font-size:14px}
+
+#lang select{width:auto;margin-inline-start:18px;padding:6px 8px}

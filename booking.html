@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Book tickets · TicketNest</title><link rel="stylesheet" href="style.css"></head>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TicketNest</title><link rel="stylesheet" href="style.css"></head>
 <body data-page="booking">
-<header class="site"><div class="wrap"><a class="logo" href="index.html">Ticket<span>Nest</span></a><nav><a href="index.html">Home</a><a href="events.html">Events</a><a href="booking.html" class=active>Book</a><a href="checkout.html">Checkout</a><a href="confirmation.html">My ticket</a></nav></div></header>
-<main><div class="wrap"><h2>Book your tickets</h2><div class="two">
-<div class="panel"><label for="event">Event</label><select id="event"></select><p class="meta" id="date"></p>
-<label for="seat">Seat type</label><select id="seat"></select>
-<label>Number of tickets</label><div class="qty"><button id="minus" aria-label="Fewer">−</button><output id="qty">2</output><button id="plus" aria-label="More">+</button></div></div>
-<div class="panel sum"><h3>Order summary</h3><div><span>Tickets</span><span id="unit"></span></div><div><span>Service fees</span><span id="fees"></span></div><div class="total"><span>Total</span><span id="total"></span></div><button class="btn" id="go" style="width:100%;margin-top:14px">Continue to checkout</button></div>
+<header class="site"><div class="wrap"><a class="logo" href="index.html">Ticket<span>Nest</span></a><nav><a href="index.html" data-i18n="nav.home"></a><a href="events.html" data-i18n="nav.events"></a><a href="booking.html" class=active data-i18n="nav.book"></a><a href="checkout.html" data-i18n="nav.checkout"></a><a href="confirmation.html" data-i18n="nav.ticket"></a><span id="lang"></span></nav></div></header>
+<main><div class="wrap"><h2 data-i18n="booking.heading"></h2><div class="two">
+<div class="panel"><label for="event" data-i18n="booking.event"></label><select id="event"></select><p class="meta" id="date"></p>
+<label for="seat" data-i18n="booking.seat"></label><select id="seat"></select>
+<label data-i18n="booking.qty"></label><div class="qty"><button id="minus" data-i18n-attr="aria-label:booking.fewer">−</button><output id="qty">2</output><button id="plus" data-i18n-attr="aria-label:booking.more">+</button></div></div>
+<div class="panel sum"><h3 data-i18n="booking.summary"></h3><div><span id="tickets"></span><span id="unit"></span></div><div><span data-i18n="booking.fees"></span><span id="fees"></span></div><div class="total"><span data-i18n="booking.total"></span><span id="total"></span></div><button class="btn" id="go" style="width:100%;margin-top:14px" data-i18n="booking.continue"></button></div>
 </div></div></main>
-<footer><div class="wrap">TicketNest is a sample site. No real tickets or payments.</div></footer>
-<script src="app.js"></script></body></html>
+<footer><div class="wrap" data-i18n="footer.note"></div></footer>
+<script src="locales/en.js"></script><script src="i18n.js"></script><script src="app.js"></script></body></html>
