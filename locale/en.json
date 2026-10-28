@@ -1,7 +1,7 @@
 {
     "welcome_header": "Hello world!",
     "title": {
-        "template": "{page} · TicketNest 2",
+        "template": "{page} · TicketNest",
         "home": "Home",
         "events": "Events",
         "booking": "Book tickets",
@@ -133,7 +133,6 @@
         "sent": "We sent a confirmation to {email}",
         "line": "{tickets} · {seat}",
         "note": "Show this code at the door. Total paid: {total}",
-        "more": "Book more events",
-        "empty": "No order found."
+        "more": "Book more events"
     }
 }
